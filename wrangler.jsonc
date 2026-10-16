@@ -8,6 +8,8 @@
     { "pattern": "flashkards.app", "custom_domain": true },
     { "pattern": "www.flashkards.app", "custom_domain": true }
   ],
+  // Pull requests get a Worker Preview; it has to be declared, even empty.
+  "previews": {},
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page"
