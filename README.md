@@ -1,11 +1,6 @@
-# Flashkards marketing site
+# Flashkards ⚡️ marketing site
 
 The static site for [flashkards.app](https://flashkards.app): Home, Privacy and Support. Built with Astro and served from Cloudflare Workers static assets.
-
-- Design: the "Marketing site" page in the Flashkards Redesign Figma file.
-- Colours mirror the app's `lib/theme/themePalette.ts`, as CSS variables in `src/styles/global.css`.
-- App screenshots in `src/assets` are 2x exports from Figma.
-- Shared values such as the support email and App Store URL live in `src/site.ts`.
 
 ## Commands
 
