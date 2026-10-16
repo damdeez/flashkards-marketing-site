@@ -1,0 +1,40 @@
+---
+import TextPage from '../components/TextPage.astro';
+import { site } from '../site';
+
+const sections = [
+  {
+    title: 'Your cards stay on your device',
+    body: 'Your decks and cards, including their names, descriptions and colours, are saved on your phone. They are never uploaded to us or to anyone else.',
+  },
+  {
+    title: 'Works offline',
+    body: 'Because your cards live on your device, studying and editing work without an internet connection. Only importing from a link needs one.',
+  },
+  {
+    title: 'What we don’t collect',
+    body: 'Flashkards has no accounts, analytics, ads or tracking. We don’t collect your name, email address, location or contacts.',
+  },
+  {
+    title: 'Importing cards',
+    body: 'When you import from a Google Sheet, the app downloads that sheet straight from Google using the link you paste. When you import a file, it reads only the file you pick. Google’s privacy policy covers sheets hosted by Google.',
+  },
+  {
+    title: 'Deleting your data',
+    body: 'Delete a deck or card in the app to remove it. Uninstalling Flashkards removes everything it stored.',
+  },
+  {
+    title: 'Changes and contact',
+    body: `If this policy changes, the new version will appear on this page with a new date. Questions? Email ${site.email}.`,
+  },
+];
+---
+
+<TextPage
+  title="Privacy policy"
+  description="How Flashkards keeps your cards on your device, and what it doesn’t collect."
+  eyebrow="PRIVACY POLICY · UPDATED OCTOBER 15, 2026"
+  heading="Your cards stay on your phone."
+  intro="Flashkards is a flashcard study app for iPhone, with Android coming soon. This page explains how it handles your information. The short version: your cards stay on your device."
+  sections={sections}
+/>

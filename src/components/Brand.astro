@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import icon from '../assets/icon.png';
+
+interface Props {
+  size?: number;
+}
+
+const { size = 34 } = Astro.props;
+---
+
+<a href="/" class="brand" aria-label="Flashkards home">
+  <Image src={icon} alt="" width={size} densities={[1, 2]} class="logo" style={`--size: ${size}px`} />
+  <span>Flashkards</span>
+</a>
+
+<style>
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .logo {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 22.5%;
+  }
+</style>

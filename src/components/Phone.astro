@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  // Rendered width of the whole device in CSS pixels.
+  width: number;
+  class?: string;
+  loading?: 'eager' | 'lazy';
+  // For the image Lighthouse reports as the largest paint: fetch it first.
+  priority?: boolean;
+}
+
+const { src, alt, width, class: className, loading = 'lazy', priority = false } = Astro.props;
+// The bezel is 12/414 of the device width, as in the Figma phone frames.
+const screenWidth = Math.round(width * (390 / 414));
+---
+
+<div class:list={['phone', className]} style={`--w: ${width}px`}>
+  <Image
+    src={src}
+    alt={alt}
+    widths={[screenWidth, screenWidth * 2]}
+    sizes={`${screenWidth}px`}
+    loading={priority ? 'eager' : loading}
+    fetchpriority={priority ? 'high' : undefined}
+  />
+</div>
+
+<style>
+  .phone {
+    flex: none;
+    width: var(--w);
+    max-width: 100%;
+    padding: calc(var(--w) * 0.029);
+    border-radius: calc(var(--w) * 0.14);
+    background: var(--ink);
+    box-shadow: var(--shadow-phone);
+  }
+
+  .phone :global(img) {
+    width: 100%;
+    border-radius: calc(var(--w) * 0.111);
+  }
+</style>

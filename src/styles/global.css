@@ -1,0 +1,157 @@
+/* The app's shipped palette (flashkards lib/theme/themePalette.ts). */
+:root {
+  --bg: #fbf9f4;
+  --surface: #ffffff;
+  --ink: #1f2030;
+  --ink-soft: #45475a;
+  --muted: #646577;
+  --line: #e6e2d9;
+  --primary: #4138e7;
+  --primary-pressed: #352ebd;
+  --on-primary: #ffffff;
+  --positive: #65c480;
+  --banner: #1f2030;
+  /* Deck tints: the base colour mixed with white, as in deckColors.ts. */
+  --indigo-faint: #e4e3fc;
+  --indigo-light: #c6c3f8;
+  --badge-soon: #ece9e2;
+
+  --gutter: clamp(20px, 8.33vw, 120px);
+  --section-y: clamp(72px, 7.8vw, 112px);
+  --shadow-phone: 0 28px 56px rgb(31 32 48 / 0.18);
+
+  --font: var(--font-inter);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.display {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.lead {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.callout {
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 20px;
+  }
+
+  .display {
+    font-size: 40px;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  .h2 {
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 120ms ease;
+}
+
+.button:hover {
+  background: var(--primary-pressed);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

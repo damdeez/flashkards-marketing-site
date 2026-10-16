@@ -1,43 +1,19 @@
-# Astro Starter Kit: Minimal
+# Flashkards marketing site
 
-```sh
-bun create astro@latest -- --template minimal
-```
+The static site for [flashkards.app](https://flashkards.app): Home, Privacy and Support. Built with Astro and served from Cloudflare Workers static assets.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Design: the "Marketing site" page in the Flashkards Redesign Figma file.
+- Colours mirror the app's `lib/theme/themePalette.ts`, as CSS variables in `src/styles/global.css`.
+- App screenshots in `src/assets` are 2x exports from Figma.
+- Shared values such as the support email and App Store URL live in `src/site.ts`.
 
-## 🚀 Project Structure
+## Commands
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command | What it does |
+| --- | --- |
+| `bun install` | Install dependencies |
+| `bun run dev` | Start the dev server at http://localhost:4321 |
+| `bun run build` | Build the static site into `dist/` |
+| `bun run preview` | Preview the build locally |
+| `bun run cf:dev` | Build, then serve it with Wrangler as Cloudflare would |
+| `bun run deploy` | Build and deploy with Wrangler |

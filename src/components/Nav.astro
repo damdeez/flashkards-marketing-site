@@ -1,0 +1,59 @@
+---
+import Brand from './Brand.astro';
+---
+
+<header class="nav">
+  <Brand />
+  <nav aria-label="Main">
+    <ul class="links">
+      <li><a href="/#features">Features</a></li>
+      <li><a href="/privacy">Privacy</a></li>
+      <li><a href="/support">Support</a></li>
+    </ul>
+    <a href="/#get-the-app" class="button">Get the app</a>
+  </nav>
+</header>
+
+<style>
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px var(--gutter);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .links {
+    display: flex;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .links a:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 767px) {
+    .nav {
+      padding-block: 14px;
+    }
+
+    .links {
+      display: none;
+    }
+  }
+</style>

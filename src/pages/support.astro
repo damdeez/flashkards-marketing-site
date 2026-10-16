@@ -1,0 +1,76 @@
+---
+import TextPage from '../components/TextPage.astro';
+import { site } from '../site';
+
+const sections = [
+  {
+    title: 'How do I import from Google Sheets?',
+    body: 'Open a deck, tap Import Cards and paste the sheet’s link. The sheet has to be shared so anyone with the link can view it. Pick the front and back columns, review the cards, then add them.',
+  },
+  {
+    title: 'Is there an Android version?',
+    body: 'It’s coming soon. Flashkards is on iPhone first, and the Android version will follow on Google Play.',
+  },
+  {
+    title: 'Which files can I import?',
+    body: 'CSV and TSV files from Files, iCloud Drive, Google Drive or Dropbox. Using Excel or Numbers? Export the sheet as CSV first, then pick that file.',
+  },
+  {
+    title: 'What happens to duplicate cards?',
+    body: 'When you import, cards that are already in the deck are skipped by default, so importing the same sheet twice won’t double up your deck.',
+  },
+  {
+    title: 'Are my cards backed up?',
+    body: 'Your cards live only on your device, so deleting the app deletes them too. Keep your original sheet or file if you want a copy.',
+  },
+  {
+    title: 'Does Flashkards work offline?',
+    body: 'Yes. Studying and editing work without a connection. Only importing from a link needs one.',
+  },
+];
+---
+
+<TextPage
+  title="Support"
+  description="Answers to common Flashkards questions, and how to get in touch."
+  eyebrow="SUPPORT"
+  heading="How can we help?"
+  intro="Questions, bugs or ideas for Flashkards? Check the answers below, or send an email and you’ll hear back from a real person."
+  sections={sections}
+>
+  <div class="contact">
+    <div>
+      <p class="title">Email support</p>
+      <a class="callout email" href={`mailto:${site.email}`}>{site.email}</a>
+    </div>
+    <a class="button" href={`mailto:${site.email}`}>Send an email</a>
+  </div>
+</TextPage>
+
+<style>
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 28px;
+    border-radius: 24px;
+    background: var(--indigo-faint);
+  }
+
+  .title {
+    font-weight: 600;
+  }
+
+  .email {
+    color: var(--primary);
+  }
+
+  @media (max-width: 767px) {
+    .contact {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  }
+</style>
