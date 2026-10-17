@@ -10,7 +10,7 @@ import Brand from './Brand.astro';
       <li><a href="/privacy">Privacy</a></li>
       <li><a href="/support">Support</a></li>
     </ul>
-    <a href="/#get-the-app" class="button">Get the app</a>
+    <a href="/#get-the-app" class="nav-cta">Get the app</a>
   </nav>
 </header>
 
@@ -47,7 +47,46 @@ import Brand from './Brand.astro';
     color: var(--ink);
   }
 
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 0 18px;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--on-primary);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow:
+      inset 0 1px 0 color-mix(in srgb, var(--on-primary) 16%, transparent),
+      0 4px 12px color-mix(in srgb, var(--primary) 22%, transparent);
+    transition:
+      transform 140ms ease,
+      box-shadow 140ms ease,
+      background-color 140ms ease;
+  }
+
+  .nav-cta:hover {
+    background: var(--primary);
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 1px 0 color-mix(in srgb, var(--on-primary) 22%, transparent),
+      0 6px 14px color-mix(in srgb, var(--primary) 20%, transparent);
+  }
+
+  .nav-cta:active {
+    transform: translateY(0);
+  }
+
   @media (max-width: 767px) {
+    .nav-cta {
+      min-height: 44px;
+    }
+
     .nav {
       padding-block: 14px;
     }
