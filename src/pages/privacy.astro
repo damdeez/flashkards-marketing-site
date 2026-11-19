@@ -13,7 +13,12 @@ const sections = [
   },
   {
     title: 'What we don’t collect',
-    body: 'Flashkards has no accounts, analytics, ads or tracking. We don’t collect your name, email address, location or contacts.',
+    body: 'Flashkards has no accounts, analytics, ads or tracking. Apart from the crash reports described below, we don’t collect anything about you, including your name, email address, location or contacts.',
+  },
+  {
+    title: 'Crash reports',
+    body: 'When the app crashes or hits certain errors, such as a failed import or update, it sends a report to Sentry, the service we use to find and fix bugs. A report includes the error and basic device and app details: your phone model, its OS version and the app version. It never includes your cards or decks, your name or email address, or screenshots, and IP addresses are not stored. Reports aren’t linked to you and are never used for tracking or ads.',
+    link: { label: 'Read Sentry’s privacy policy', href: 'https://sentry.io/privacy/' },
   },
   {
     title: 'Importing cards',
@@ -32,8 +37,8 @@ const sections = [
 
 <TextPage
   title="Privacy policy"
-  description="How Flashkards keeps your cards on your device, and what it doesn’t collect."
-  eyebrow="PRIVACY POLICY · UPDATED OCTOBER 15, 2026"
+  description="How Flashkards keeps your cards on your device, and the crash reports it sends."
+  eyebrow="PRIVACY POLICY · UPDATED NOVEMBER 18, 2026"
   heading="Your cards stay on your phone."
   intro="Flashkards is a flashcard study app for iPhone, with Android coming soon. This page explains how it handles your information. The short version: your cards stay on your device."
   sections={sections}
