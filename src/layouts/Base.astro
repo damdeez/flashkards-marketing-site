@@ -32,6 +32,8 @@ const ogImage = new URL('/og.png', site.url).href;
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#FBF9F4" />
+    <!-- Safari on iPhone shows an "Open in App Store" banner for the app. -->
+    <meta name="apple-itunes-app" content={`app-id=${site.appStoreId}`} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={fullTitle} />
