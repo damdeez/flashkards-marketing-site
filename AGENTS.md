@@ -20,3 +20,7 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## Git
+
+- Name branches `dh/<linear-key>-<short-description>`, e.g. `dh/fla-34-change-colour-to-color`. With no Linear ticket, use `dh/<short-description>`.
